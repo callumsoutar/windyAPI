@@ -1,8 +1,5 @@
 const options = {
-    key: '1I6lLiqgpo5krbQMdhnTmLX3zJtKzMGT', // REPLACE WITH YOUR KEY !!!
-
-    // Changing Windy parameters at start-up time
-    // (recommended for faster start-up)
+    key: '1I6lLiqgpo5krbQMdhnTmLX3zJtKzMGT', 
     lat: 50.4,
     lon: 14.3,
     zoom: 5,
@@ -16,11 +13,9 @@ const options = {
 
 windyInit(options, windyAPI => {
     const { store } = windyAPI;
-    // All the params are stored in windyAPI.store
 
     const levels = store.getAllowed('availLevels');
     // levels = ['surface', '850h', ... ]
-    // Getting all available values for given key
 
     let i = 0;
     setInterval(() => {
